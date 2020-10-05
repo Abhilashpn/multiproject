@@ -1,0 +1,4 @@
+rootProject.name = 'demo'
+include ':firstdemo'
+include ':seconddemo'
+include ':thirddemo'
