@@ -22,3 +22,24 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+bintray {
+    user = System.getenv("bintrayUser")
+    key = System.getenv("bintrayApiKey")
+    publications = ['MyPublication']
+    pkg {
+        repo = 'maven'
+        name = 'multiproject'
+        userOrg = 'abhilashp'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/Abhilashpn/buildrepo.git'
+        version {
+            name = '11.0'
+            desc = '11.0'
+            released = new Date()
+            gpg {
+                sign = true
+            }
+        }
+    }
+}
